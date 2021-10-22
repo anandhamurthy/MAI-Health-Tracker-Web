@@ -1,0 +1,12 @@
+<div
+  class="border-0 bg-white mb-2 list-group-item d-inline-flex"
+  style="border-radius: 10px"
+  *ngFor="let icon of icon_set"
+>
+  <div class="mx-auto d-flex align-items-center">
+    <img src="../../../assets/img/{{ icon.name }}.svg" alt="" width="35px" />
+    <p style="color: black; margin-bottom: 0; margin-left: 10px">
+      {{ icon.name }}
+    </p>
+  </div>
+</div>

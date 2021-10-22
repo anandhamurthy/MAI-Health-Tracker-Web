@@ -1,0 +1,141 @@
+<div
+  class="border-0 bg-white mb-2 list-group-item d-inline-flex"
+  style="border-radius: 10px"
+  *ngFor="let drink of drink_set"
+>
+  <div
+    *ngIf="drink.selected == false"
+    class="mx-auto d-flex flex-column align-items-center"
+  >
+    <div
+      class="d-flex"
+      style="background: white; border-radius: 10px 20px 10px 25px"
+    >
+      <div
+        *ngIf="drink.selected"
+        style="
+          background: white;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px 15px 10px 0;
+          cursor: pointer;
+        "
+        class="align-self-end"
+        (click)="removeFoodItem(drink.icon_id)"
+      >
+        <i class="fa fa-minus-circle" style="color: black; font-size: 25px"></i>
+      </div>
+
+      <img
+        class="py-2"
+        src="../../../assets/img/{{ drink.icon_id }}"
+        alt=""
+        width="60px"
+        style="cursor: pointer"
+        (click)="addFoodItem(drink.icon_id)"
+      />
+      <div
+        *ngIf="drink.selected"
+        style="
+          background: white;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2px;
+          border-radius: 15px 10px 10px 15px;
+        "
+      >
+        <div
+          style="
+            background: black;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+          "
+        >
+          <p class="m-auto" style="color: white">{{ drink.count }}</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="color: black; margin-bottom: 0">
+      {{ drink.name }}
+    </p>
+  </div>
+
+  <div
+    *ngIf="drink.selected"
+    class="mx-auto d-flex flex-column align-items-center"
+  >
+    <div
+      class="d-flex"
+      style="background: skyblue; border-radius: 10px 20px 10px 25px"
+    >
+      <div
+        *ngIf="drink.selected"
+        style="
+          background: white;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px 15px 10px 0;
+          cursor: pointer;
+        "
+        class="align-self-end"
+        (click)="removeFoodItem(drink.icon_id)"
+      >
+        <i class="fa fa-minus-circle" style="color: black; font-size: 25px"></i>
+      </div>
+
+      <img
+        class="py-2"
+        src="../../../assets/img/{{ drink.icon_id }}"
+        alt=""
+        width="60px"
+        style="cursor: pointer"
+        (click)="addFoodItem(drink.icon_id)"
+      />
+      <div
+        *ngIf="drink.selected"
+        style="
+          background: white;
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2px;
+          border-radius: 15px 10px 10px 15px;
+        "
+      >
+        <div
+          style="
+            background: black;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+          "
+        >
+          <p class="m-auto" style="color: white">{{ drink.count }}</p>
+        </div>
+      </div>
+    </div>
+
+    <p style="color: black; margin-bottom: 0">
+      {{ drink.name }}
+    </p>
+  </div>
+</div>

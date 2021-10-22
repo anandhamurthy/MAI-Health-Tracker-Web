@@ -1,0 +1,193 @@
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="d-flex flex-column align-items-center">
+      <h4 class="p-2">{{ title }}</h4>
+    </div>
+
+    <div class="bg-white col-12">
+      <div class="list-group mx-3 outer-box">
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <div class="mx-auto d-flex flex-row align-items-center">
+            <p style="font-weight: 800; color: orange; margin-right: 10px">
+              Foods
+            </p>
+          </div>
+          <div class="d-flex">
+            <app-select-food-item></app-select-food-item>
+          </div>
+        </div>
+
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <div class="mx-auto d-flex flex-row align-items-center">
+            <p style="font-weight: 800; color: skyblue; margin-right: 10px">
+              Drinks
+            </p>
+          </div>
+          <div class="d-flex">
+            <app-select-drink-item></app-select-drink-item>
+          </div>
+        </div>
+
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <div class="mx-auto d-flex flex-row align-items-center">
+            <p style="font-weight: 800; color: lightgreen; margin-right: 10px">
+              Symptoms
+            </p>
+          </div>
+          <div class="d-flex">
+            <app-select-symptom-item></app-select-symptom-item>
+          </div>
+        </div>
+
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <p style="font-weight: 800; color: aqua">Water</p>
+          <div
+            class="
+              mx-auto
+              p-2
+              col-8
+              d-flex
+              flex-row
+              align-items-center
+              justify-content-around
+            "
+            style="background-color: aqua; border-radius: 10px"
+          >
+            <i
+              class="fa fa-minus-circle"
+              style="color: white; cursor: pointer; font-size: 30px"
+              (click)="minusCount()"
+            ></i>
+            <p style="font-weight: 600; color: white; margin-bottom: 0">
+              {{ water_count }} Cups
+            </p>
+            <i
+              class="fa fa-plus-circle"
+              style="color: white; cursor: pointer; font-size: 30px"
+              (click)="plusCount()"
+            ></i>
+          </div>
+        </div>
+
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <p style="font-weight: 800; color: green">Health</p>
+          <p
+            style="
+              font-weight: 400;
+              color: lightgreen;
+              text-align: center;
+              margin-bottom: 0;
+            "
+          >
+            {{ health_status }}
+          </p>
+
+          <div
+            class="
+              range
+              mx-auto
+              p-2
+              col-8
+              d-flex
+              flex-row
+              align-items-center
+              justify-content-around
+            "
+          >
+            <input
+              #ranger
+              type="range"
+              class="form-range form-range-track-height-80"
+              min="0"
+              max="5"
+              step="1"
+              value="0"
+              (input)="healthStatus(ranger.value)"
+            />
+          </div>
+        </div>
+
+        <div
+          class="
+            border-0
+            shadow
+            p-2
+            mb-2
+            bg-white
+            mb-2
+            list-group-item
+            flex-column
+          "
+          style="border-radius: 10px"
+        >
+          <p style="font-weight: 800; color: red">Summary</p>
+          <p>add Notes..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a (click)="submit()" class="float" style="cursor: pointer">
+  <i class="fa fa-check my-float"></i>
+</a>

@@ -1,0 +1,39 @@
+<p style="font-weight: 600; color: orange">{{ type }}</p>
+<div *ngIf="item.foods" class="mx-auto d-flex flex-row align-items-center">
+  <p
+    *ngIf="item.foods.length"
+    style="font-weight: 400; color: orange; margin-right: 10px"
+  >
+    Food
+  </p>
+</div>
+<div *ngIf="item.foods.length" class="d-flex">
+  <app-icon-item *ngIf="item.foods" [icon_set]="item.foods"></app-icon-item>
+</div>
+
+<div class="mx-auto d-flex flex-row align-items-center">
+  <p
+    *ngIf="item.drinks.length"
+    style="font-weight: 400; color: orange; margin-right: 10px"
+  >
+    Drink
+  </p>
+</div>
+<div *ngIf="item.drinks.length" class="d-flex">
+  <app-icon-item *ngIf="item.drinks" [icon_set]="item.drinks"></app-icon-item>
+</div>
+
+<div class="mx-auto d-flex flex-row align-items-center">
+  <p
+    *ngIf="item.symptoms.length"
+    style="font-weight: 400; color: orange; margin-right: 10px"
+  >
+    Symptom
+  </p>
+</div>
+<div *ngIf="item.symptoms.length" class="d-flex">
+  <app-icon-item
+    *ngIf="item.symptoms"
+    [icon_set]="item.symptoms"
+  ></app-icon-item>
+</div>

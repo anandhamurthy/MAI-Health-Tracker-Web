@@ -1,0 +1,164 @@
+<div class="container-fluid mt-2">
+  <div class="row">
+    <div class="col-md-12 d-flex flex-row align-items-center flex-wrap">
+      <div class="d-flex">
+        <img src="../../assets/img/icon.png" width="60px" />
+        <p
+          class="align-self-center"
+          style="margin-bottom: 0; font-weight: 500; font-size: 20px"
+        >
+          MAI-Health Tracker
+        </p>
+      </div>
+      <div
+        class="my-2 d-flex flex-column align-self-center"
+        style="margin-left: 15px"
+      >
+        <h4>Dashboard</h4>
+        <p>Welcome back, Anandha Murthy</p>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-1 align-self-center">
+      <button type="button" class="btn btn-primary btn-sm" (click)="logout()">
+        Logout
+      </button>
+    </div> -->
+
+    <div class="col-md-2 shadow p-3 mb-15 bg-white">
+      <div
+        class="nav flex-column nav-pills align-items-start"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        <div class="d-flex flex-column align-items-center">
+          <a
+            class="nav-link active"
+            id="v-pills-home-tab"
+            data-toggle="pill"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+            style="cursor: pointer"
+            ><i class="mx-2 fas fa-home"></i>Dashboard</a
+          >
+        </div>
+        <div class="my-2 d-flex flex-column align-items-center">
+          <a
+            class="nav-link active"
+            id="v-pills-home-tab"
+            data-toggle="pill"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+            style="cursor: pointer"
+            ><i class="mx-2 fas fa-chart-line"></i>Prescription</a
+          >
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <a
+            class="nav-link active"
+            data-toggle="pill"
+            role="tab"
+            aria-controls="v-pills-settings"
+            aria-selected="false"
+            (click)="logout()"
+            style="cursor: pointer"
+            ><i class="mx-2 fas fa-sign-out-alt"></i>Logout</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow p-3 mb-5 bg-white col-md-5">
+      <div class="d-flex flex-row justify-content-around">
+        <i (click)="prevDate()" class="p-1 m-1 fas fa-chevron-left"></i>
+        <p
+          style="margin-bottom: 0; font-weight: 500; font-size: 16px"
+          class="mb-3"
+        >
+          {{ today_date }}
+        </p>
+        <i (click)="nextDate()" class="p-1 m-1 fas fa-chevron-right"></i>
+      </div>
+      <div *ngIf="records.length != 0" class="list-group mx-3 outer-box">
+        <app-record-item
+          *ngFor="let item of records"
+          [item]="item"
+        ></app-record-item>
+      </div>
+      <div *ngIf="records.length == 0" class="list-group mx-3 outer-box">
+        <div class="d-flex flex-column align-items-center">
+          <img src="../../assets/img/empty.gif" width="300px" />
+          <h5 class="mb-0">No Records Found Yet!</h5>
+          <h5 class="mb-0">Click + to Start!</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="shadow p-3 mb-5 bg-white col-md-5">
+      <div class="list-group mx-3 outer-box">
+        <div class="d-flex flex-column align-items-center">
+          <img src="../../assets/img/graph.gif" width="300px" />
+          <h5 class="mb-0">No Graph!</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a style="cursor: pointer" class="float" (click)="open(mymodal)">
+  <i class="fa fa-plus my-float"></i>
+</a>
+
+<ng-template #mymodal class="modal fade modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-body">
+      <div class="list-group">
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-primary btn-sm"
+          routeLinks=""
+        >
+          Add Weight
+        </button>
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-light btn-sm"
+          routerLink="create-record/breakfast"
+        >
+          Breakfast
+        </button>
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-light btn-sm"
+          routerLink="create-record/lunch"
+        >
+          Lunch
+        </button>
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-light btn-sm"
+          routerLink="create-record/snack"
+        >
+          Snack
+        </button>
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-light btn-sm"
+          routerLink="create-record/dinner"
+        >
+          Dinner
+        </button>
+
+        <button
+          type="button"
+          class="m-2 shadow-0 rounded-0 btn btn-primary btn-sm"
+        >
+          Add Water
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>

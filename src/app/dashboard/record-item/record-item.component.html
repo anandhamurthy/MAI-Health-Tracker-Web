@@ -1,0 +1,77 @@
+<div
+  class="border-0 shadow p-2 mb-2 bg-white mb-2 list-group-item flex-column"
+  style="border-radius: 10px"
+>
+  <div class="d-flex w-100 justify-content-between">
+    <p>{{ item.day }}</p>
+    <p>{{ item.record_id }}</p>
+  </div>
+  <hr />
+  <p style="font-weight: 600; color: aqua">Water</p>
+  <div
+    class="
+      mx-auto
+      col-8
+      d-flex
+      flex-row
+      align-items-center
+      justify-content-around
+    "
+    style="background-color: aqua; border-radius: 10px"
+  >
+    <i class="fa fa-minus-circle" style="color: white"></i>
+    <p style="font-weight: 600; color: white; margin-bottom: 0">
+      {{ item.water_count }} Cups
+    </p>
+    <i class="fa fa-plus-circle" style="color: white"></i>
+  </div>
+  <hr *ngIf="item.weight > 0" />
+  <div
+    *ngIf="item.weight > 0"
+    class="mx-auto d-flex flex-row align-items-center"
+  >
+    <p
+      style="
+        font-weight: 600;
+        color: violet;
+        margin-bottom: 0;
+        margin-right: 10px;
+      "
+    >
+      Weight
+    </p>
+    <p style="color: black; margin-bottom: 0">{{ item.weight }} Kg</p>
+  </div>
+
+  <!-- breakfast -->
+  <hr *ngIf="item.breakfast" />
+  <app-type-item
+    *ngIf="item.breakfast"
+    [item]="item.breakfast"
+    [type]="'Breakfast'"
+  ></app-type-item>
+
+  <!-- lunch -->
+  <hr *ngIf="item.lunch" />
+  <app-type-item
+    *ngIf="item.lunch"
+    [item]="item.lunch"
+    [type]="'Lunch'"
+  ></app-type-item>
+
+  <!-- snack -->
+  <hr *ngIf="item.snack" />
+  <app-type-item
+    *ngIf="item.snack"
+    [item]="item.snack"
+    [type]="'Snack'"
+  ></app-type-item>
+
+  <!-- dinner -->
+  <hr *ngIf="item.dinner" />
+  <app-type-item
+    *ngIf="item.dinner"
+    [item]="item.dinner"
+    [type]="'Dinner'"
+  ></app-type-item>
+</div>

@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 18px;
+    background-color: #CCC;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #FD6A7E;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+    margin-top: 22px;
+}
+
+.course {
+    width: 100%;
+    text-align: left;
+}
+
+.course h1 {
+    font-size: 34px;
+    font-weight: 500;
+    padding: 20px 0 0 30px;
+}
+
+.course p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px 0 0 30px;
+}
+
+.c-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.c-nav-head {
+    flex-basis: 80%;
+}
+
+.c-nav-add {
+    padding: 5px 30px;
+    background: #0C9;
+    align-content: flex-end;
+}
+
+.c-nav-add a {
+    color: white;
+    text-decoration: none;
+}
+
+.c-nav-tail {
+    flex-basis: 20%;
+}
+
+.my-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.my-body .c-records {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    height: 70vh;
+}
+
+.my-body .c-graph {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    height: 70vh;
+}
+
+.c-graph-head {
+    background-color: rgb(253, 253, 253);
+    border-radius: 4px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+}
+
+.c-records-head {
+    background-color: rgb(253, 253, 253);
+    border-radius: 4px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.records {
+    width: 500px;
+    background: #0C9;
+    height: 200px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding: 10px;
+    align-self: center;
+}
+
+hr {
+    border: 3px dotted #c0c0c0;
+    border-style: none none dotted;
+    color: #fff;
+    background-color: #fff;
+    margin: 5px 2px;
+}
+
+p {
+    margin-bottom: 0
+}

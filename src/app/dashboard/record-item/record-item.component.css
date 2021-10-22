@@ -1,0 +1,11 @@
+hr {
+    border: 3px dotted #c0c0c0;
+    border-style: none none dotted;
+    color: #fff;
+    background-color: #fff;
+    margin: 5px 2px;
+}
+
+p {
+    margin-bottom: 0
+}
